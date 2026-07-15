@@ -3,7 +3,7 @@ namespace loops_collections
 {
     internal class AverageCalculator
     {
-        internal void AveragesWithDoWhile()
+        internal void AveragesWithWhile()
         {
             throw new NotImplementedException();
         }
@@ -13,7 +13,7 @@ namespace loops_collections
             throw new NotImplementedException();
         }
 
-        internal void AveragesWithWhile()
+        internal void AveragesWithDoWhile()
         {
             double total = 0.0;
             int count = 0;
@@ -22,7 +22,7 @@ namespace loops_collections
             do
             {
                 Console.Write("Enter  number, or Q to quit: ");
-                string input = Console.ReadLine();
+                input = Console.ReadLine();
 
                 if (input.ToUpper() != "Q")
                 {

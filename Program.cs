@@ -6,7 +6,7 @@
         {
             AverageCalculator calculator = new AverageCalculator();
 
-            calculator.AveragesWithWhile();
+          //  calculator.AveragesWithWhile();
             Console.WriteLine("==========");
 
             calculator.AveragesWithDoWhile();
