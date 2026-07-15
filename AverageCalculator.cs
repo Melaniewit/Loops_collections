@@ -17,17 +17,21 @@ namespace loops_collections
         {
             double total = 0.0;
             int count = 0;
+            string input;
 
-            Console.Write("Enter the first number, or Q to quit: ");
-            string input = Console.ReadLine();
-            while (input.ToUpper() != "Q")
+            do
             {
-                total += double.Parse(input);
-                count++;
+                Console.Write("Enter  number, or Q to quit: ");
+                string input = Console.ReadLine();
 
-                Console.Write("Enter another number, or Q to quit: ");
-                input = Console.ReadLine();
-            }
+                if (input.ToUpper() != "Q")
+                {
+                    total += double.Parse(input);
+                    count++;
+                }
+            } while (input.ToUpper() != "Q");
+
+        
             if (count == 0)
             {
                 Console.WriteLine("You didn't enter any numbers");
