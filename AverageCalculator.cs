@@ -28,6 +28,8 @@ namespace loops_collections
                 Console.Write("Enter another number, or Q to quit: ");
                 input = Console.ReadLine();
             }
+            Console.WriteLine($"The average of those numbers is {total / count}");
+
         }
     }
 }
