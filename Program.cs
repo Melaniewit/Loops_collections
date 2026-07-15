@@ -9,7 +9,7 @@
           //  calculator.AveragesWithWhile();
             Console.WriteLine("==========");
 
-            calculator.AveragesWithDoWhile();
+           // calculator.AveragesWithDoWhile();
             Console.WriteLine("==========");
 
             calculator.AveragesWithFor();

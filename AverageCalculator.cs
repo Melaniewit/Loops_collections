@@ -64,18 +64,19 @@ namespace loops_collections
 
         internal void AveragesWithFor()
         {
-            int total = 0;
+            double total = 0;
 
             Console.Write("How many numbs do you want to input");
             int counter = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < counter; i++) {
+            for (int i = 0; i < counter; i++)
+            {
                 Console.Write("Input Number");
                 string number = Console.ReadLine();
-                total += int.Parse(number);
+                total += double.Parse(number);
             }
 
-            if (total == 0)
+            if (counter == 0)
             {
                 Console.WriteLine("You didn't enter any numbers");
             }
@@ -85,4 +86,5 @@ namespace loops_collections
             }
 
         }
+    }
 }
