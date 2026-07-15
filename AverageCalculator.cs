@@ -1,4 +1,6 @@
-﻿namespace loops_collections
+﻿using System.Numerics;
+
+namespace loops_collections
 {
     internal class AverageCalculator
     {
@@ -8,7 +10,7 @@
             int count = 0;
 
             Console.Write("Enter the first number, or Q to quit: ");
-            string input = Console.ReadLine() ?? "";
+            string input = Console.ReadLine();
 
             while (input.ToUpper() != "Q")
             {
@@ -16,7 +18,7 @@
                 count++;
 
                 Console.Write("Enter another number, or Q to quit: ");
-                input = Console.ReadLine() ?? "";
+                input = Console.ReadLine();
             }
 
             if (count == 0)
@@ -39,7 +41,7 @@
             do
             {
                 Console.Write("Enter a number, or Q to quit: ");
-                input = Console.ReadLine() ?? "";
+                input = Console.ReadLine();
 
                 if (input.ToUpper() != "Q")
                 {
@@ -62,7 +64,25 @@
 
         internal void AveragesWithFor()
         {
-            // We'll do this next
+            int total = 0;
+
+            Console.Write("How many numbs do you want to input");
+            int counter = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < counter; i++) {
+                Console.Write("Input Number");
+                string number = Console.ReadLine();
+                total += int.Parse(number);
+            }
+
+            if (total == 0)
+            {
+                Console.WriteLine("You didn't enter any numbers");
+            }
+            else
+            {
+                Console.WriteLine($"The average of those numbers is {total / counter}");
+            }
+
         }
-    }
 }
