@@ -1,37 +1,24 @@
-﻿
-namespace loops_collections
+﻿namespace loops_collections
 {
     internal class AverageCalculator
     {
-        internal void AveragesWithDoWhile()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void AveragesWithFor()
-        {
-            throw new NotImplementedException();
-        }
-
         internal void AveragesWithWhile()
         {
             double total = 0.0;
             int count = 0;
-            string input;
 
-            do
+            Console.Write("Enter the first number, or Q to quit: ");
+            string input = Console.ReadLine() ?? "";
+
+            while (input.ToUpper() != "Q")
             {
-                Console.Write("Enter  number, or Q to quit: ");
-                string input = Console.ReadLine();
+                total += double.Parse(input);
+                count++;
 
-                if (input.ToUpper() != "Q")
-                {
-                    total += double.Parse(input);
-                    count++;
-                }
-            } while (input.ToUpper() != "Q");
+                Console.Write("Enter another number, or Q to quit: ");
+                input = Console.ReadLine() ?? "";
+            }
 
-        
             if (count == 0)
             {
                 Console.WriteLine("You didn't enter any numbers");
@@ -40,7 +27,42 @@ namespace loops_collections
             {
                 Console.WriteLine($"The average of those numbers is {total / count}");
             }
+        }
 
+
+        internal void AveragesWithDoWhile()
+        {
+            double total = 0.0;
+            int count = 0;
+            string input = "";
+
+            do
+            {
+                Console.Write("Enter a number, or Q to quit: ");
+                input = Console.ReadLine() ?? "";
+
+                if (input.ToUpper() != "Q")
+                {
+                    total += double.Parse(input);
+                    count++;
+                }
+
+            } while (input.ToUpper() != "Q");
+
+            if (count == 0)
+            {
+                Console.WriteLine("You didn't enter any numbers");
+            }
+            else
+            {
+                Console.WriteLine($"The average of those numbers is {total / count}");
+            }
+        }
+
+
+        internal void AveragesWithFor()
+        {
+            // We'll do this next
         }
     }
 }
