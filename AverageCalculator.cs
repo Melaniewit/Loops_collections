@@ -28,7 +28,14 @@ namespace loops_collections
                 Console.Write("Enter another number, or Q to quit: ");
                 input = Console.ReadLine();
             }
-            Console.WriteLine($"The average of those numbers is {total / count}");
+            if (count == 0)
+            {
+                Console.WriteLine("You didn't enter any numbers");
+            }
+            else
+            {
+                Console.WriteLine($"The average of those numbers is {total / count}");
+            }
 
         }
     }
